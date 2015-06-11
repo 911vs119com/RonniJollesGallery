@@ -1,0 +1,44 @@
+# see http://stackoverflow.com/questions/18225126/how-to-use-git-for-unity3d-source-control
+# =============== #
+# Unity generated #
+# =============== #
+[Tt]emp/
+[Ll]ibrary/
+[Bb]uild/
+[Oo]bj/
+[Uu]nityGenerated/
+[Aa]ssets/AssetStoreTools*
+
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+ExportedObj/
+*.booproj
+*.csproj
+*.pidb
+*.pidb.meta
+*.sln
+*.suo
+*.svd
+*.user
+*.userprefs
+*.unityproj
+*.tmp
+# unity generated on crash reports
+sysinfo.txt
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+# ======= #
+# My #
+builds/
