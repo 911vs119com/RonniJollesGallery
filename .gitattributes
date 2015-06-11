@@ -24,3 +24,5 @@
 *.psd filter=lfs -crlf
 *.blend filter=lfs -crlf
 *.cubemap filter=lfs -crlf
+*.zip filter=lfs -crlf
+
