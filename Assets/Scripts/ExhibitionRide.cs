@@ -11,6 +11,8 @@ public class ExhibitionRide : MonoBehaviour {
 	private float endX, endZ, endR;
 
 	void Start () {
+		
+			Screen.sleepTimeout = SleepTimeout.NeverSleep;
 		int count = artworks.transform.childCount + 1;
 		Keyframe[] xKeys = new Keyframe[count];
 		Keyframe[] zKeys = new Keyframe[count];
@@ -30,9 +32,9 @@ public class ExhibitionRide : MonoBehaviour {
 			zKeys[i] = new Keyframe( time, pos.z );
 			rKeys[i] = new Keyframe( time, artwork.rotation.y );
 		}
-		endX = xKeys [count - 1].value;
-		endZ = zKeys [count - 1].value;
-		endR = rKeys [count - 1].value;
+		endX = xKeys [count - 3].value;
+		endZ = zKeys [count - 3].value;
+		endR = rKeys [count - 3].value;
 		xCurve = new AnimationCurve (xKeys);
 		zCurve = new AnimationCurve (zKeys);
 		rCurve = new AnimationCurve (rKeys);
@@ -41,9 +43,9 @@ public class ExhibitionRide : MonoBehaviour {
 	void Update () {
 		if (riding) {
 			transform.position = new Vector3 (xCurve.Evaluate (Time.time), transform.position.y, zCurve.Evaluate (Time.time));
-			Quaternion rot = transform.rotation;
-			rot.y = rCurve.Evaluate (Time.time);
-			transform.rotation = rot; 
+			//Quaternion rot = transform.rotation;
+			//rot.y = rCurve.Evaluate (Time.time);
+			//transform.rotation = rot; 
 
 			if (Mathf.Approximately( transform.position.x, endX) &&
 			    Mathf.Approximately( transform.position.z, endZ) &&
