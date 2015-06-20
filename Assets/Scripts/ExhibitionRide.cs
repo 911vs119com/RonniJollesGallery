@@ -32,9 +32,9 @@ public class ExhibitionRide : MonoBehaviour {
 			zKeys[i] = new Keyframe( time, pos.z );
 			rKeys[i] = new Keyframe( time, artwork.rotation.y );
 		}
-		endX = xKeys [count - 3].value;
-		endZ = zKeys [count - 3].value;
-		endR = rKeys [count - 3].value;
+		endX = xKeys [count - 1].value;
+		endZ = zKeys [count - 1].value;
+		endR = rKeys [count - 1].value;
 		xCurve = new AnimationCurve (xKeys);
 		zCurve = new AnimationCurve (zKeys);
 		rCurve = new AnimationCurve (rKeys);
